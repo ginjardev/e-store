@@ -15,10 +15,10 @@ def order_create(request):
                     price=item['price'],
                     quantity=item['quantity']
                 )
-            cart.save()
+            cart.clear()
         return render(
             request,
-            'orders/order/create.html',
+            'orders/order/created.html',
             {'order': order}
         )
     else:
